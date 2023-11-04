@@ -17,6 +17,7 @@ async function getWeatherByLocation(city)
     console.log(respData);
 
     addWeathertoPage(respData);
+    windAdvisory(respData);
 }
 
 function addWeathertoPage(data)
@@ -60,3 +61,16 @@ form.addEventListener("submit", (e) =>
         getWeatherByLocation(city);
     }
 })
+
+function windAdvisory(data)
+{
+    const windSpeed = data.wind.speed;
+    if (windSpeed > 10)
+    {
+        alert("DO NOT SAIL!");
+    }
+    else
+    {
+        alert("ur gucci gang");
+    }
+}
