@@ -7,7 +7,7 @@ const search = document.getElementById("search");
 
 
 
-const url = (city) => 'https://api.openweathermap.org/data/2.5/weather?zip='+ city + ',US&appid=' + apikey;
+const url = (city) => 'https://api.openweathermap.org/data/2.5/weather?zip='+ city + ',US&appid=' + apikey + '&units=imperial';
 
 async function getWeatherByLocation(city)
 {
@@ -21,7 +21,7 @@ async function getWeatherByLocation(city)
 
 function addWeathertoPage(data)
 {
-    const temperature = KtoF(data.main.temp);
+    const temperature = data.main.temp;
     const humidity = data.main.humidity;
     const windSpeed = data.wind.speed;
 
@@ -31,7 +31,7 @@ function addWeathertoPage(data)
     weather.innerHTML = `
         <h2><img src="https://openweathermap.org/img/wn/${
           data.weather[0].icon
-        }@2x.png" /> ${temperature}°C <img src="https://openweathermap.org/img/wn/${
+        }@2x.png" /> ${temperature}°F <img src="https://openweathermap.org/img/wn/${
     data.weather[0].icon
   }@2x.png" /></h2>
         <small>${data.weather[0].main}</small>
@@ -44,10 +44,10 @@ function addWeathertoPage(data)
     main.appendChild(weather);
 }
 
-function KtoF(K)
-{
-    return Math.floor((K-273.5)*(9/5))
-}
+// function KtoF(K)
+// {
+//     return Math.floor((K-273.5) * (9/5));
+// }
 
 form.addEventListener("submit", (e) =>
 {
