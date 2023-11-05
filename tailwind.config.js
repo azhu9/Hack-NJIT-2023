@@ -5,7 +5,7 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-      'light-blue': '#d9f0f9',
+      'light-blue': '#2c456b',
       'blue': '#89aabd',
       'blue-gray': '#7391a2',
       'gray': '#dde6ec',
@@ -15,7 +15,6 @@ module.exports = {
       'bermuda': '#78dcca',
     },
     fontFamily: {
-      
     },
     extend: {},
   },

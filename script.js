@@ -1,4 +1,4 @@
-const apikey = "d4bae4654377c77cb09c335d16c2f373"
+const weather_apikey = "d4bae4654377c77cb09c335d16c2f373"
 
 const main = document.getElementById("main");
 const form = document.getElementById("form");
@@ -7,7 +7,7 @@ const search = document.getElementById("search");
 
 
 
-const url = (city) => 'https://api.openweathermap.org/data/2.5/weather?zip='+ city + ',US&appid=' + apikey + '&units=imperial';
+const url = (city) => 'https://api.openweathermap.org/data/2.5/weather?zip='+ city + ',US&appid=' + weather_apikey + '&units=imperial';
 
 async function getWeatherByLocation(city)
 {
