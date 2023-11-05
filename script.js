@@ -31,17 +31,15 @@ function addWeathertoPage(data)
     weather.className = "flex justify-center";
     weather.classList.add("weather");
 
-    weather.innerHTML = `
+    weather.innerHTML += `
         <h2 class = "flex justify-center><img src="https://openweathermap.org/img/wn/${
           data.weather[0].icon
-        }@2x.png" /> ${temperature}°F <img src="https://openweathermap.org/img/wn/${
+        }@2x.png" /><img src="https://openweathermap.org/img/wn/${
     data.weather[0].icon
   }@2x.png" /></h2>
         <medium class = "flex - justify-center>${data.weather[0].main}</medium>
         <div class="more-info">
-        <p>Humidity : <span>${humidity}%</span></p>
-        <hr>
-        <p>Wind speed : <span>${+Math.trunc(windSpeed * 3.16)}km/h</span></p>
+        <p>Temperature: <span>${temperature}°F</span><br>Humidity : <span>${humidity}%</span><br>Wind speed : <span>${windSpeed}mi/hr</span></p>
         </div>
     `;
 
