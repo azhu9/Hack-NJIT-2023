@@ -6,7 +6,7 @@
   <link href="./output.css" rel="stylesheet">
   <script src="script.js" defer></script>
 </head>
-<body class="h-screen bg-black font-body">
+<body class="font-body">
  <div>
 
   <!-- Nav bar  -->
@@ -14,7 +14,7 @@
   <div class="max-w-screen-xl  flex flex-wrap items-center justify-between mx-auto p-5 ">
     <a href="index.html" class="flex items-center">
         <img src="https://hacknjit.org/assets/img/HackNJIT2023/hacknjit2023_logo.png" class="h-10 mr-3 " alt="Logo" />
-        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">OCEAN WEATHER APP</span>
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Weather Ahoy!</span>
     </a>
     <button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
@@ -36,7 +36,7 @@
 </nav>
 
 <!-- Banner Background Image -->
-<div class="h-[510px] justify-center items-center bg-blend-darken">
+<div class="h-[500px] justify-center items-center bg-blend-darken">
   <img src="img/boat2.png" class="w-screen">
   <h1 class="absolute text-5xl font-medium text-white top-48 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center fadeInUp-animation" style="color:white; font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
     Find out if its the right day to set sail!</h1>
@@ -50,18 +50,28 @@
 <div class = card>
   <form id = "form" autocomplete="off">
   <div class="h-[150px] bg-light-blue shadow-sm flex justify-center space-x-2 p-10 z-10" role="group">
-    <label for="zipcode" class = "p-5" style="color:white">Zipcode:</label>
-    <input type="text" id="search" name="zipcode" class = "pr-5 indent-5">
-    <input type="submit" value = "Search" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-  </input>
-    <button type="button" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
-      Use Current Location
-    </button>
+    <!-- <div class="h-[50px] w-[500px] bg-blue-gray rounded-lg p-10 mt-[25px]"> -->
+      <label for="zipcode" class = "p-5" style="color:white">Zipcode:</label>
+      <input type="text" id="search" name="zipcode" class = "pr-5 indent-5">
+      <input type="submit" value = "Search" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+    </input>
+      <button type="button" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+        Use Current Location
+      </button>
     </div>
+    <!-- </div> -->
 </form>
 </div>
 
-<main id="main"></main>
+
+<main id="main" >
+  <div class="h-[330px] bg-blue flex justify-center items-center">
+    <div class="w-[500px] h-[200px] rounded-lg bg-black mt-[30px]" style="color:white;"  id="result">
+      <p>OK</p>
+    </div>
+
+  </div>
+</main>
   
 
 
