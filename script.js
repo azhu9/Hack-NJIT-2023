@@ -68,11 +68,11 @@ function windAdvisory(data)
 {
     const windSpeed = data.wind.speed;
     let advisory = document.createElement('div');
-    if (windSpeed > 10)
+    if (windSpeed > 8)
     {
         advisory.className = 'bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'
         advisory.role = 'alert'
-        advisory.innerHTML = '<p class="font-bold">DO NOT SAIL</p>'
+        advisory.innerHTML = '<p class="font-bold">DO NOT SAIL, HIGH WINDS</p>'
         result.appendChild(advisory);
     }
     else

@@ -52,12 +52,12 @@
   <div class="h-[150px] bg-light-blue shadow-sm flex justify-center space-x-2 p-10 z-10" role="group">
     <!-- <div class="h-[50px] w-[500px] bg-blue-gray rounded-lg p-10 mt-[25px]"> -->
       <label for="zipcode" class = "p-5" style="color:white">Zipcode:</label>
-      <input type="text" id="search" name="zipcode" class = "pr-5 indent-5">
-      <input type="submit" value = "Search" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-l-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+      <input type="text" id="search" name="zipcode" class = "pr-5 indent-5 rounded-lg">
+      <input type="submit" value = "Search" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
     </input>
-      <button type="button" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
+      <!-- <button type="button" class="bg-bermuda px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-r-md hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-2 focus:ring-blue-700 focus:text-blue-700 dark:bg-gray-700 dark:border-gray-600 dark:text-white dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-blue-500 dark:focus:text-white">
         Use Current Location
-      </button>
+      </button> -->
     </div>
     <!-- </div> -->
 </form>
@@ -67,7 +67,8 @@
 <main id="main" >
   <div class="h-[330px] bg-blue flex justify-center items-center">
     <div class="w-[500px] h-[200px] rounded-lg bg-black mt-[30px]" style="color:white;"  id="result">
-      <p>OK</p>
+      <button onClick="window.location.reload();" class="bg-bermuda rounded-lg p-2 font-medium" style="color:black">Clear Box</button>
+
     </div>
 
   </div>
