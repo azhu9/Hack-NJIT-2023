@@ -3,6 +3,7 @@ const weather_apikey = "d4bae4654377c77cb09c335d16c2f373"
 const main = document.getElementById("main");
 const form = document.getElementById("form");
 const search = document.getElementById("search");
+const result = document.getElementById("result");
 
 
 
@@ -27,22 +28,24 @@ function addWeathertoPage(data)
     const windSpeed = data.wind.speed;
 
     const weather = document.createElement("div");
+    weather.className = "flex justify-center";
     weather.classList.add("weather");
 
     weather.innerHTML = `
-        <h2><img src="https://openweathermap.org/img/wn/${
+        <h2 class = "flex justify-center><img src="https://openweathermap.org/img/wn/${
           data.weather[0].icon
         }@2x.png" /> ${temperature}°F <img src="https://openweathermap.org/img/wn/${
     data.weather[0].icon
   }@2x.png" /></h2>
-        <small>${data.weather[0].main}</small>
+        <medium class = "flex - justify-center>${data.weather[0].main}</medium>
         <div class="more-info">
         <p>Humidity : <span>${humidity}%</span></p>
+        <hr>
         <p>Wind speed : <span>${+Math.trunc(windSpeed * 3.16)}km/h</span></p>
         </div>
     `;
 
-    main.appendChild(weather);
+    result.appendChild(weather);
 }
 
 // function KtoF(K)
@@ -62,15 +65,23 @@ form.addEventListener("submit", (e) =>
     }
 })
 
+
 function windAdvisory(data)
 {
     const windSpeed = data.wind.speed;
+    let advisory = document.createElement('div');
     if (windSpeed > 10)
     {
-        alert("DO NOT SAIL!");
+        advisory.className = 'bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'
+        advisory.role = 'alert'
+        advisory.innerHTML = '<p class="font-bold">DO NOT SAIL</p>'
+        result.appendChild(advisory);
     }
     else
     {
-        alert("ur gucci gang");
+        advisory.className = 'bg-blue-100 border-t border-b border-blue-500 text-blue-700 px-4 py-3'
+        advisory.role = 'alert'
+        advisory.innerHTML = '<p class="font-bold">HAPPY SAILING!</p>'
+        result.appendChild(advisory);
     }
 }
